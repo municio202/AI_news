@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MI hírek — reggeli összefoglaló — 2026. július 13.</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --card: #f5f5f7;
+    --text-primary: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --accent: #0071e3;
+    --border: #d2d2d7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 56px 20px 80px;
+  }
+  header {
+    margin-bottom: 48px;
+  }
+  .eyebrow {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+  }
+  .date {
+    font-size: 17px;
+    color: var(--text-secondary);
+    margin: 0 0 20px;
+    font-weight: 500;
+  }
+  .intro {
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 60ch;
+  }
+  .note {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 16px;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .card {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 28px 24px 24px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+  .card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 4px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  .pill {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(0, 113, 227, 0.1);
+    border-radius: 999px;
+    padding: 5px 12px;
+  }
+  .card-date {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-left: auto;
+  }
+  h2 {
+    font-size: 21px;
+    line-height: 1.3;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+  }
+  .summary {
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--text-primary);
+    margin: 0 0 16px;
+  }
+  .why {
+    font-size: 15px;
+    line-height: 1.5;
+    background: #ffffff;
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin: 0 0 18px;
+    color: var(--text-primary);
+  }
+  .why strong {
+    color: var(--accent);
+  }
+  .source {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .source:hover {
+    text-decoration: underline;
+  }
+  .source-name {
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: 14px;
+    margin-right: 6px;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+  footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 480px) {
+    h1 { font-size: 32px; }
+    .wrap { padding: 40px 16px 64px; }
+    .card { padding: 22px 18px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">MI hírek</div>
+    <h1>MI hírek — reggeli összefoglaló</h1>
+    <p class="date">2026. július 13.</p>
+    <p class="intro">A világ mesterséges intelligenciával kapcsolatos legfontosabb történései az elmúlt napokból, rangsorolva globális jelentőség szerint — hogy reggeli kávé mellett gyorsan átfuthasd.</p>
+    <p class="note">A mai válogatás július 9–12. közötti fejleményeket öleli fel: az Apple és az OpenAI közötti üzleti titoklopási pert, az SK Hynix rekordméretű Nasdaq-bevezetését és NVIDIA-partnerségét, a Meta felhőalapú MI-számítási üzletágának megerősítését és albertai adatközpont-beruházását, a Federal Reserve új MI-munkacsoportját, valamint az Anthropic Claude Fable 5 ingyenes elérésének újabb meghosszabbítását. Ebben az időszakban kiemelkedő új modell-bemutató vagy tudományos kutatási áttörés nem jelent meg megbízható forrásokban, ezért a mai lista túlnyomórészt üzleti és infrastrukturális hírekre épül.</p>
+  </header>
+
+  <div class="list">
+
+    <article class="card">
+      <div class="card-top">
+        <span class="badge">1</span>
+        <span class="pill">Üzlet</span>
+        <span class="card-date">2026. júl. 10.</span>
+      </div>
+      <h2>Az Apple bíróságra vitte az OpenAI-t: üzleti titkok ellopásával vádolja</h2>
+      <p class="summary">Az Apple 2026. július 10-én keresetet nyújtott be az OpenAI ellen az észak-kaliforniai szövetségi bíróságon, azt állítva, hogy a cég „minden szinten" — a műszaki munkatársaktól a hardverügyi vezetőig — ellopta az Apple üzleti titkait saját fogyasztói hardvereszközeinek fejlesztéséhez. A kereset szerint az OpenAI hardverügyi vezetője, a korábbi Apple-alelnök Tang Tan arra utasította az Apple-től átjelentkező jelölteket, hogy hozzanak magukkal fizikai alkatrészeket az állásinterjúkra, egy másik volt alkalmazott pedig állítólag egy Apple laptopot is ellopott. A per éles fordulatot jelent a két cég 2024-es, nagy visszhangot kapott partnersége után, amely azóta megromlott, mióta az OpenAI 6,4 milliárd dollárért felvásárolta Jony Ive Io Products nevű hardveres startupját.</p>
+      <p class="why"><strong>Miért fontos:</strong> Ez az első nagy, nyílt jogi háború két vezető amerikai techóriás között az MI-korszakban, amely alapjaiban kérdőjelezheti meg az iparági toborzási és partnerségi gyakorlatokat.</p>
+      <a class="source" href="https://www.cnbc.com/2026/07/10/apple-openai-lawsuit-trade-secrets.html" target="_blank" rel="noopener noreferrer"><span class="source-name">CNBC</span>Forrás →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <span class="badge">2</span>
+        <span class="pill">Üzlet</span>
+        <span class="card-date">2026. júl. 10.</span>
+      </div>
+      <h2>Az SK Hynix minden idők legnagyobb külföldi Nasdaq-bevezetését hajtotta végre, és többéves memóriapartnerségre lépett az NVIDIA-val</h2>
+      <p class="summary">Az SK Hynix amerikai letéti részvényei (ADR) 2026. július 10-én debütáltak a Nasdaqon; a kibocsátás mintegy 26,5 milliárd dollárt hozott a cégnek, ami minden idők legnagyobb amerikai tőzsdei bevezetése egy külföldi vállalat részéről. A részvények az első kereskedési napon 13 százalékot emelkedtek a 149 dolláros kibocsátási árhoz képest, miközben a cég egy időben többéves technológiai partnerséget jelentett be az NVIDIA-val a következő generációs, MI-célú memóriachipek közös fejlesztésére. Az SK Hynix jelenleg a nagy sávszélességű memória (HBM) piac mintegy 60 százalékát uralja, ezt a pozíciót erősíti tovább az NVIDIA-megállapodás.</p>
+      <p class="why"><strong>Miért fontos:</strong> A bevezetés és az NVIDIA-partnerség is azt jelzi, hogy a memóriachip-gyártók az MI-infrastruktúra-verseny egyik legtőkeéhesebb és legfontosabb szereplőivé váltak.</p>
+      <a class="source" href="https://www.techtimes.com/articles/320235/20260712/sk-hynix-soars-13-nasdaq-debut-hbm-architecture-makes-it-irreplaceable-ai-chips.htm" target="_blank" rel="noopener noreferrer"><span class="source-name">Tech Times</span>Forrás →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <span class="badge">3</span>
+        <span class="pill">Üzlet</span>
+        <span class="card-date">2026. júl. 9.</span>
+      </div>
+      <h2>A Meta hivatalosan is megerősítette: bérbe adná MI-számítási kapacitását, miközben tovább növeli infrastruktúráját</h2>
+      <p class="summary">Mark Zuckerberg 2026. július 9-én nyilvánosan is megerősítette, hogy a Meta fontolgatja MI-számítási kapacitása egy részének külső ügyfelek számára történő bérbeadását egy új, „Meta Compute" nevű felhőüzletág keretében, versenyre kelve az AWS-szel, a Microsoft Azure-ral és a Google Clouddal. A bejelentés egybeesett azzal a hírrel, hogy a Meta 10 milliárd dolláros beruházással új, 1 gigawattos adatközpontot épít az albertai Sturgeon Countyban — ez lesz a vállalat első kanadai adatközpontja és 33. létesítménye globálisan —, és hogy 2027-ig megduplázná teljes számítási kapacitását. A hírek hatására a Meta részvényei egyetlen nap alatt jelentősen, több mint 8 százalékot emelkedtek.</p>
+      <p class="why"><strong>Miért fontos:</strong> A lépés azt jelzi, hogy a hiperskálázó techcégek immár nemcsak felhasználják, hanem üzleti modellként is árusítják saját MI-infrastruktúrájuk fölösleges kapacitását, ami új versenyt indíthat a felhőpiacon.</p>
+      <a class="source" href="https://www.bloomberg.com/news/articles/2026-07-09/meta-s-zuckerberg-says-exploring-ai-cloud-business-makes-sense" target="_blank" rel="noopener noreferrer"><span class="source-name">Bloomberg</span>Forrás →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <span class="badge">4</span>
+        <span class="pill">Üzlet</span>
+        <span class="card-date">2026. júl. 9.</span>
+      </div>
+      <h2>A Federal Reserve első MI-munkacsoportját Marc Andreessen vezeti majd társelnökként</h2>
+      <p class="summary">A Fed elnöke, Kevin Warsh 2026. július 9-én jelentette be öt új, külső szakértőkből álló munkacsoport felállítását, amelyek a jegybank gazdasági elemzési gyakorlatát korszerűsítik; ezek egyikét, amely a mesterséges intelligencia munkaerőpiacra, termelékenységre és végső soron a monetáris politikára gyakorolt hatását vizsgálja, Marc Andreessen, az Andreessen Horowitz kockázatitőke-cég társalapítója vezeti majd Charles I. Jones Stanford-közgazdásszal és Asha Sharma Xbox-vezérigazgatóval közösen. A kinevezés vitákat váltott ki, mivel az a16z mintegy 90 milliárd dollárnyi kezelt vagyonából 3,4 milliárd dollárt kifejezetten MI-befektetésekbe csoportosított; a testület ajánlásait az év végéig várják.</p>
+      <p class="why"><strong>Miért fontos:</strong> Ez az első eset, hogy a Fed intézményesen, saját munkacsoport szintjén vizsgálja az MI makrogazdasági hatásait, ami hosszú távon befolyásolhatja a jegybank kamatdöntéseit is.</p>
+      <a class="source" href="https://www.axios.com/2026/07/09/fed-warsh-task-force-andreessen" target="_blank" rel="noopener noreferrer"><span class="source-name">Axios</span>Forrás →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <span class="badge">5</span>
+        <span class="pill">Modell/kiadás</span>
+        <span class="card-date">2026. júl. 12.</span>
+      </div>
+      <h2>Az Anthropic harmadszor is meghosszabbította a Claude Fable 5 ingyenes elérését, július 19-ig</h2>
+      <p class="summary">Az Anthropic 2026. július 12-én, vasárnap jelentette be, hogy a Claude Fable 5 — a vállalat Opus fölötti, új „Mythos" kategóriás csúcsmodellje — továbbra is ingyenesen elérhető marad a Pro, Max, Team és egyes prémium Enterprise előfizetők számára 2026. július 19. 23:59:59-ig (csendes-óceáni idő szerint); ez már a harmadik halasztás az eredetileg július 7-re kitűzött határidőhöz képest. Az érintett előfizetők eddig a heti felhasználási keretük legfeljebb feléig használhatják a Fable 5-öt; a határidő lejárta után az elérés előre fizetett kreditrendszerre vált, millió tokenenként 10 dollár bemeneti és 50 dollár kimeneti áron — ez a legmagasabb ár, amelyet az Anthropic valaha egy általánosan elérhető modellhez közzétett.</p>
+      <p class="why"><strong>Miért fontos:</strong> Az ismétlődő haladékok azt sugallják, hogy az Anthropic még nem áll készen a Fable 5 teljes árazású bevezetésére, miközben a felhasználók és fejlesztők ragaszkodnak az ingyenes hozzáféréshez.</p>
+      <a class="source" href="https://www.bleepingcomputer.com/news/artificial-intelligence/claude-fable-5-stays-free-for-paid-users-until-july-19-as-anthropic-buys-more-time/" target="_blank" rel="noopener noreferrer"><span class="source-name">BleepingComputer</span>Forrás →</a>
+    </article>
+
+  </div>
+
+  <footer>
+    <a href="../index.html">← Vissza az archívumhoz</a>
+  </footer>
+</div>
+</body>
+</html>
