@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MI hírek — reggeli összefoglaló — 2026. július 24.</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --card: #f5f5f7;
+    --text-primary: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --accent: #0071e3;
+    --border: #d2d2d7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 56px 20px 80px;
+  }
+  header {
+    margin-bottom: 48px;
+  }
+  .eyebrow {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+  }
+  .date {
+    font-size: 17px;
+    color: var(--text-secondary);
+    margin: 0 0 20px;
+    font-weight: 500;
+  }
+  .intro {
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 60ch;
+  }
+  .note {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 16px;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .card {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 28px 24px 24px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+  .card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 4px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  .pill {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(0, 113, 227, 0.1);
+    border-radius: 999px;
+    padding: 5px 12px;
+  }
+  .card-date {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-left: auto;
+  }
+  h2 {
+    font-size: 21px;
+    line-height: 1.3;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+  }
+  .summary {
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--text-primary);
+    margin: 0 0 16px;
+  }
+  .why {
+    font-size: 15px;
+    line-height: 1.5;
+    background: #ffffff;
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin: 0 0 18px;
+    color: var(--text-primary);
+  }
+  .why strong {
+    color: var(--accent);
+  }
+  .source {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .source:hover {
+    text-decoration: underline;
+  }
+  .source-name {
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: 14px;
+    margin-right: 6px;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+  footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 480px) {
+    h1 { font-size: 32px; }
+    .wrap { padding: 40px 16px 64px; }
+    .card { padding: 22px 18px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">MI hírek</div>
+    <h1>MI hírek — reggeli összefoglaló</h1>
+    <p class="date">2026. július 24.</p>
+    <p class="intro">A világ mesterséges intelligenciával kapcsolatos legfontosabb történései az elmúlt napokból, rangsorolva globális jelentőség szerint — hogy reggeli kávé mellett gyorsan átfuthasd.</p>
+    <p class="note">A mai válogatás július 22–23. fejleményeit öleli fel. A hét legnagyobb visszhangot kiváltó híre a Fehér Ház és a kínai Moonshot AI közötti modell-lopási vita volt: Washington azzal vádolta a céget, hogy az Anthropic Fable modelljét desztillálva építette fel a Kimi K3-at. Emellett az OpenAI 30 milliárd dolláros georgiai adatközpontot jelentett be és 750 milliárd dollárra emelte infrastruktúra-kiadási tervét, Sundar Pichai megerősítette, hogy elindult a Gemini 4 eddigi legambiciózusabb előtanítási futtatása, a Meta látásmodelljei pedig hónapokról percekre gyorsították a tudományos képelemzést az amerikai Genesis Mission kutatási programban, míg az Nvidia egy Blackwell Ultra szuperszámítógépet adományozott az amerikai haditengerészet posztgraduális iskolájának.</p>
+  </header>
+
+  <div class="list">
+
+    <article class="card">
+      <div class="card-top">
+        <span class="badge">1</span>
+        <span class="pill">Üzlet</span>
+        <span class="card-date">2026. júl. 22–23.</span>
+      </div>
+      <h2>A Fehér Ház azzal vádolja a Moonshot AI-t, hogy az Anthropic Fable modelljét desztillálva építette fel a Kimi K3-at</h2>
+      <p class="summary">Michael Kratsios, a Fehér Ház Tudomány- és Technológiapolitikai Hivatalának igazgatója 2026. július 22-én nyilvánosan azzal vádolta a kínai Moonshot AI-t, hogy nagyszabású, rejtett ipari desztillációval használta fel az Anthropic Fable modelljét a nemrég bemutatott, 2,8 billió paraméteres Kimi K3 felépítéséhez. Az Anthropic korábban azt állította, hogy a Moonshot csalárd fiókokon keresztül több mint 3,4 millió Claude-beszélgetést generált, hogy kinyerje a modell érvelési, kódolási és eszközhasználati képességeit, a Fehér Ház szerint pedig a cég a tiltás ellenére Nvidia-chipekhez is hozzáfért. Az ügyet a pénzügyminisztérium szankciós fenyegetései és megújuló amerikai-kínai technológiai feszültség kíséri.</p>
+      <p class="why"><strong>Miért fontos:</strong> Ez az eddigi legnagyobb nyilvánosságot kapott amerikai-kínai modell-lopási vita, amely alapjaiban rengetheti meg a nyugati laborok hozzáférési politikáját és az exportkorlátozások betartatását.</p>
+      <a class="source" href="https://cyberscoop.com/white-house-accuses-moonshot-ai-anthropic-model-distillation/" target="_blank" rel="noopener noreferrer"><span class="source-name">CyberScoop</span>Forrás →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <span class="badge">2</span>
+        <span class="pill">Üzlet</span>
+        <span class="card-date">2026. júl. 22.</span>
+      </div>
+      <h2>Az OpenAI 30 milliárd dolláros "Project Camellia" adatközpontot épít Georgiában, és 750 milliárd dollárra emelte infrastruktúra-kiadási tervét</h2>
+      <p class="summary">Az OpenAI 2026. július 22-én jelentette be a "Project Camellia" nevű, 3,2 gigawattos adatközpont-komplexumot a georgiai Savannah melletti Effingham megyében — ez lesz a cég első, teljes egészében saját maga tervezett és épített létesítménye, amelynek teljes költsége a becslések szerint meghaladhatja a 30 milliárd dollárt. A Georgia Powerrel kötött 25 éves megállapodás alapján az energiát 2028 és 2032 között szakaszosan szállítják, a cég pedig 80 millió dollárt ígért helyi közösségi programokra. A bejelentéssel egy időben vált ismertté, hogy az OpenAI a korábbi 600 milliárd dollárról mintegy 750 milliárd dollárra emelte a 2030-ig tervezett számítási infrastruktúra-kiadását.</p>
+      <p class="why"><strong>Miért fontos:</strong> A lépés jól mutatja, milyen extrém ütemben nő a vezető MI-laborok tőkeigénye, és felveti a kérdést, hogy a jelenlegi finanszírozási és energiaipari kapacitás fenntartható-e ilyen tempóban.</p>
+      <a class="source" href="https://techcrunch.com/2026/07/22/openais-ai-spending-spree-has-ballooned-to-750b/" target="_blank" rel="noopener noreferrer"><span class="source-name">TechCrunch</span>Forrás →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <span class="badge">3</span>
+        <span class="pill">Modell/kiadás</span>
+        <span class="card-date">2026. júl. 22–23.</span>
+      </div>
+      <h2>Sundar Pichai megerősítette: elindult a Gemini 4 eddigi legambiciózusabb előtanítási futtatása</h2>
+      <p class="summary">A Google vezérigazgatója az Alphabet 2026. második negyedéves eredményközlőjén jelentette be, hogy megkezdődött a Gemini 4 előtanítása, amelyet a cég története legambiciózusabb ilyen futtatásának nevezett. Pichai elismerte, hogy a Gemininek erősebb kódolási és ágensi képességekre van szüksége a versenyben maradáshoz, és hangsúlyozta, hogy a modellt nem a mai, hanem a Gemini 4 megjelenésekor várható frontier-szinthez igazítva építik. Konkrét megjelenési dátumot vagy API-hozzáférést egyelőre nem közöltek.</p>
+      <p class="why"><strong>Miért fontos:</strong> A bejelentés jelzi, hogy a Google a jelenlegi Gemini-architektúra finomítása helyett egy teljesen új alapmodellbe fektet, ami alapvetően átrajzolhatja a frontier-modellek versenyét.</p>
+      <a class="source" href="https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q2-2026/" target="_blank" rel="noopener noreferrer"><span class="source-name">Google Blog</span>Forrás →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <span class="badge">4</span>
+        <span class="pill">Kutatás</span>
+        <span class="card-date">2026. júl. 22.</span>
+      </div>
+      <h2>A Meta látásmodelljei hónapokról percekre gyorsítják a tudományos képelemzést a Genesis Mission programban</h2>
+      <p class="summary">A Meta 2026. július 22-én mutatta be, hogyan hajtja a nyílt súlyú Segment Anything Model 3 és DINOv3 látásmodellje a SYNAPS-I elnevezésű kezdeményezést, amely a Lawrence Berkeley, az Argonne, a Brookhaven és az Oak Ridge nemzeti laboratóriumot köti össze az amerikai Energiaügyi Minisztérium Genesis Mission programjában. A Berkeley Lab Advanced Light Source-jánál végzett szárazságtűrő szőlő-kutatásban a modellek automatikusan rekonstruálják a szőlőtő szárának mikro-CT felvételeit és azonosítják a vízszállító xilém-ereket, ezzel egy hónapos manuális címkézési munkát mintegy 15 percre rövidítve.</p>
+      <p class="why"><strong>Miért fontos:</strong> A projekt konkrét bizonyítékot ad arra, hogy a nyílt súlyú MI-modellek valós, nagy léptékű tudományos felfedezési folyamatokat gyorsíthatnak fel, nem csupán kereskedelmi alkalmazásokban hasznosak.</p>
+      <a class="source" href="https://ai.meta.com/blog/genesis-mission-lawrence-berkeley-national-laboratory-segment-anything-dino/" target="_blank" rel="noopener noreferrer"><span class="source-name">Meta AI Blog</span>Forrás →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <span class="badge">5</span>
+        <span class="pill">Kutatás</span>
+        <span class="card-date">2026. júl. 22.</span>
+      </div>
+      <h2>Az Nvidia Blackwell Ultra alapú szuperszámítógépet adományozott az amerikai haditengerészet posztgraduális iskolájának</h2>
+      <p class="summary">Jensen Huang, az Nvidia vezérigazgatója 2026. július 22-én a kaliforniai Montereyben személyesen helyezte üzembe a DGX GB300 rendszert a Naval Postgraduate School (NPS) campusán — ez a cég legerősebb, rack-szintű Blackwell Ultra alapú vállalati MI-rendszere, amelyet nem védelmi beszerzési szerződés, hanem adomány útján kapott meg az iskola. Az NPS mintegy 1500 hallgatója és 600 oktatója számára a gép időjárás-előrejelzési, kiberbiztonsági, óceánmodellezési és katasztrófavédelmi modelleket futtat majd; az üzembe helyezésen az amerikai csendes-óceáni parancsnokság vezetője is jelen volt.</p>
+      <p class="why"><strong>Miért fontos:</strong> Az eset megmutatja, hogyan válik a frontier-szintű MI-számítási kapacitás ipari adományok révén közvetlenül az amerikai nemzetbiztonsági kutatás és oktatás részévé.</p>
+      <a class="source" href="https://blogs.nvidia.com/blog/naval-postgraduate-school-dgx-ai-supercomputer/" target="_blank" rel="noopener noreferrer"><span class="source-name">NVIDIA Blog</span>Forrás →</a>
+    </article>
+
+  </div>
+
+  <footer>
+    <a href="../index.html">← Vissza az archívumhoz</a>
+  </footer>
+</div>
+</body>
+</html>
