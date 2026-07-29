@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MI hírek — reggeli összefoglaló — 2026. július 29.</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --card: #f5f5f7;
+    --text-primary: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --accent: #0071e3;
+    --border: #d2d2d7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 56px 20px 80px;
+  }
+  header {
+    margin-bottom: 48px;
+  }
+  .eyebrow {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+  }
+  .date {
+    font-size: 17px;
+    color: var(--text-secondary);
+    margin: 0 0 20px;
+    font-weight: 500;
+  }
+  .intro {
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 60ch;
+  }
+  .note {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 16px;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .card {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 28px 24px 24px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+  .card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 4px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  .pill {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(0, 113, 227, 0.1);
+    border-radius: 999px;
+    padding: 5px 12px;
+  }
+  .card-date {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-left: auto;
+  }
+  h2 {
+    font-size: 21px;
+    line-height: 1.3;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+  }
+  .summary {
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--text-primary);
+    margin: 0 0 16px;
+  }
+  .why {
+    font-size: 15px;
+    line-height: 1.5;
+    background: #ffffff;
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin: 0 0 18px;
+    color: var(--text-primary);
+  }
+  .why strong {
+    color: var(--accent);
+  }
+  .source {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .source:hover {
+    text-decoration: underline;
+  }
+  .source-name {
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: 14px;
+    margin-right: 6px;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+  footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 480px) {
+    h1 { font-size: 32px; }
+    .wrap { padding: 40px 16px 64px; }
+    .card { padding: 22px 18px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">MI hírek</div>
+    <h1>MI hírek — reggeli összefoglaló</h1>
+    <p class="date">2026. július 29.</p>
+    <p class="intro">A világ mesterséges intelligenciával kapcsolatos legfontosabb történései az elmúlt napokból, rangsorolva globális jelentőség szerint — hogy reggeli kávé mellett gyorsan átfuthasd.</p>
+    <p class="note">A mai válogatás július 27–28. fejleményeit öleli fel. A legnagyobb port a biztonsági és üzleti front kavarta: az Nvidia több mint 30 nagyvállalattal — köztük a Microsofttal, az IBM-mel és a Hugging Face-szel, de az OpenAI, a Google és az Anthropic nélkül — megalapította az Open Secure AI Alliance-t, míg a kínai CXMT memóriachip-gyártó 466 százalékos árfolyam-emelkedéssel és 8,56 milliárd dolláros bevonással debütált a sanghaji tőzsdén. A kutatás oldalán az Anthropic bejelentette, hogy kísérleti Claude Mythos modellje két, évek óta megoldatlan kriptográfiai problémát tört fel, a fejlesztői ökoszisztémát pedig alapjaiban érinti a Model Context Protocol eddigi legnagyobb, 2026-07-28 jelű specifikációfrissítése. Emellett Washington nemzetbiztonsági okokra hivatkozva betiltotta az új kínai humanoid és négylábú robotok importját.</p>
+  </header>
+
+  <div class="list">
+
+    <article class="card">
+      <div class="card-top">
+        <span class="badge">1</span>
+        <span class="pill">Kutatás</span>
+        <span class="card-date">2026. júl. 28.</span>
+      </div>
+      <h2>Az Anthropic Claude Mythos kísérleti modellje két, évek óta megoldatlan kriptográfiai problémát tört fel</h2>
+      <p class="summary">Az Anthropic 2026. július 28-án publikált kutatása szerint a még ki nem adott Claude Mythos Preview modell mindössze 60 óra munka és kb. 100&nbsp;000 dollárnyi számítási kapacitás alatt javította a HAWK nevű, NIST által vizsgált posztkvantum aláírási jelölt ellen ismert legjobb támadást: olyan matematikai automorfizmust talált a mögöttes rácsban, amelyet szakértők két éven át kerestek, gyakorlatilag felezve a kulcs erősségét. Egy második, nagyrészt önálló, három napos futtatás során a modell a redukált, 7 körös AES-128 elleni ismert legjobb meet-in-the-middle támadást is 200–800-szorosára gyorsította. Az Anthropic hangsúlyozta, hogy egyik eredmény sem jelent közvetlen kockázatot élesben futó rendszerekre, mivel a HAWK-ot még nem vezették be, az AES-teszt pedig csak a kutatási célú, csökkentett körszámú változatot érintette.</p>
+      <p class="why"><strong>Miért fontos:</strong> Ez az egyik első dokumentált eset, hogy egy nyelvi modell önállóan olyan kriptoanalitikai áttörést ért el, amelyet éveken át nem sikerült embereknek megtalálniuk, ami alapjaiban veti fel az AI szerepét a jövőbeli kriptográfiai kutatásban és biztonsági auditokban.</p>
+      <a class="source" href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses" target="_blank" rel="noopener noreferrer"><span class="source-name">Anthropic</span>Forrás →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <span class="badge">2</span>
+        <span class="pill">Üzlet</span>
+        <span class="card-date">2026. júl. 27.</span>
+      </div>
+      <h2>Az Nvidia és több mint 30 nagyvállalat megalapította az Open Secure AI Alliance-t</h2>
+      <p class="summary">Az Nvidia 2026. július 27-én a Microsoft, az IBM, a Cisco, a Cloudflare, a Hugging Face, a Salesforce, a Palantir és további alapító tagok — összesen 37 szervezet — részvételével bejelentette az Open Secure AI Alliance nevű kezdeményezést, amelynek célja nyílt forráskódú eszközök és szabványok kifejlesztése az MI-rendszerek kiberbiztonságához. A szövetség a Linux Foundation és az OpenSSF korábbi munkájára épül, az Nvidia pedig egy NOOA nevű nyílt forráskódú projektet is bevezetett, amely az AI-ügynökök viselkedésének nyomon követhetőségét és auditálhatóságát segíti. A kezdeményezést közvetlenül a Hugging Face elleni, OpenAI-modellek okozta júliusi betörés váltotta ki; feltűnő, hogy az OpenAI, a Google és az Anthropic — a három legnagyobb zárt modelles szereplő — nem csatlakozott hozzá.</p>
+      <p class="why"><strong>Miért fontos:</strong> A 37 tagú szövetség az első nagy, iparági szintű, nyílt eszközökre épülő válasz az autonóm AI-ügynökök okozta biztonsági kockázatokra, miközben a három vezető zárt labor távolmaradása éles törésvonalat jelez a nyílt és zárt AI-biztonsági megközelítések között.</p>
+      <a class="source" href="https://blogs.nvidia.com/blog/open-secure-ai-alliance/" target="_blank" rel="noopener noreferrer"><span class="source-name">NVIDIA Blog</span>Forrás →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <span class="badge">3</span>
+        <span class="pill">Üzlet</span>
+        <span class="card-date">2026. júl. 27.</span>
+      </div>
+      <h2>A kínai CXMT memóriachip-gyártó 466 százalékos árfolyam-emelkedéssel debütált a sanghaji tőzsdén</h2>
+      <p class="summary">A ChangXin Memory Technologies (CXMT) 2026. július 27-én lépett tőzsdére a sanghaji STAR Marketen, miután 57,92 milliárd jüant (kb. 8,56 milliárd dollárt) vont be — ezzel Ázsia 2026-os legnagyobb IPO-ja és a STAR Market történetének legnagyobb félvezető-tőzsdei bevezetése lett. A részvények az első kereskedési napon akár 535 százalékkal is megugrottak, majd végül kb. 466 százalékos pluszban zártak, így a CXMT egy csapásra Kína legértékesebb tőzsdén jegyzett vállalatává vált, mintegy 489 milliárd dolláros piaci értékkel. A látványos árfolyammozgás másnapján kétpárti kongresszusi vizsgálat indult Washingtonban, mivel egyes tisztviselők szerint felmerült a kínai állami beavatkozás gyanúja az árfolyam alakulásában.</p>
+      <p class="why"><strong>Miért fontos:</strong> A CXMT debütálása a globális MI-adatközpontok memóriachip-kereslete és a szűkös DRAM-kínálat által hajtott befektetői eufóriát testesíti meg, miközben politikai feszültséget is szít Washington és Peking között a félvezető-ellátási lánc körül.</p>
+      <a class="source" href="https://www.cnbc.com/2026/07/27/cxmt-china-market-debut-chipmaker-ipo.html" target="_blank" rel="noopener noreferrer"><span class="source-name">CNBC</span>Forrás →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <span class="badge">4</span>
+        <span class="pill">Modell/kiadás</span>
+        <span class="card-date">2026. júl. 28.</span>
+      </div>
+      <h2>Megjelent a Model Context Protocol eddigi legnagyobb frissítése, a 2026-07-28-as specifikáció</h2>
+      <p class="summary">Az Agentic AI Foundation 2026. július 28-án adta ki a Model Context Protocol (MCP) 2026-07-28 jelű specifikációját, amely a protokoll indulása óta a legnagyobb változtatás: az addigi kétirányú, állapottartó modellről egy állapotmentes, kérés-válasz alapú architektúrára tér át. Az új verzió eltávolítja a munkameneteket és az inicializálási kézfogást, megerősíti az engedélyezési réteget, és bevezet egy formális bővítmény-keretrendszert az olyan képességekhez, mint az interaktív MCP Apps felületek és a hosszan futó Tasks műveletek. Az Anthropic jelezte, hogy a Claude is fokozatosan, opcionálisan tér majd át az új specifikációra, a frissítés pedig lehetővé teszi az MCP-szerverek szerver nélküli és edge-környezetben történő üzemeltetését is.</p>
+      <p class="why"><strong>Miért fontos:</strong> Az MCP mára az AI-ügynökök és külső eszközök összekapcsolásának de facto iparági szabványává vált, így ez a szerkezeti átalakítás közvetlenül befolyásolja, hogyan épülnek majd a jövő agentikus AI-alkalmazásai a nagy AI-szolgáltatóknál.</p>
+      <a class="source" href="https://blog.modelcontextprotocol.io/posts/2026-07-28/" target="_blank" rel="noopener noreferrer"><span class="source-name">Model Context Protocol Blog</span>Forrás →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <span class="badge">5</span>
+        <span class="pill">Üzlet</span>
+        <span class="card-date">2026. júl. 28.</span>
+      </div>
+      <h2>Az Egyesült Államok betiltotta az új kínai humanoid és négylábú robotok importját</h2>
+      <p class="summary">A Szövetségi Kommunikációs Bizottság (FCC) 2026. július 28-án olyan szabályozást tett közzé, amely nemzetbiztonsági okokra hivatkozva megtiltja az új kínai gyártású humanoid és négylábú robotok, valamint bizonyos, megújuló energiát, akkumulátorokat és adatközponti berendezéseket hálózatra kötő teljesítmény-inverterek importját. A Trump-adminisztráció szerint az intézkedés — amely csak a még ki nem adott, új robot- és invertermodelleket érinti — a Unitree eszközeiben már azonosított, dokumentált hátsó kapukra is választ ad, amelyeket többek között az MIT-n, a Princetonon és a Carnegie Mellonon telepített gépeken találtak. A lépés a kínai technológiai eszközök elleni amerikai importkorlátozások legújabb, robotikára és AI-infrastruktúrára kiterjesztett hulláma.</p>
+      <p class="why"><strong>Miért fontos:</strong> A döntés jelzi, hogy a humanoid robotika és az azt kiszolgáló AI-infrastruktúra immár ugyanolyan nemzetbiztonsági kérdéssé vált Washington szemében, mint a félvezetők, ami tovább mélyítheti az amerikai-kínai technológiai szétválást.</p>
+      <a class="source" href="https://www.forbes.com/sites/johnkoetsier/2026/07/28/united-states-bans-chinese-humanoid--quadruped-robots-citing-national-security/" target="_blank" rel="noopener noreferrer"><span class="source-name">Forbes</span>Forrás →</a>
+    </article>
+
+  </div>
+
+  <footer>
+    <a href="../index.html">← Vissza az archívumhoz</a>
+  </footer>
+</div>
+</body>
+</html>
