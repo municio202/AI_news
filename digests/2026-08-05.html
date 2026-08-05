@@ -30,12 +30,36 @@
   header {
     margin-bottom: 48px;
   }
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
   .eyebrow {
     font-size: 15px;
     font-weight: 600;
     color: var(--accent);
     letter-spacing: 0.02em;
-    margin-bottom: 12px;
+    margin-bottom: 0;
+  }
+  .patreon-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    background: #ff424d;
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 7px 14px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .patreon-btn:hover {
+    opacity: 0.9;
   }
   h1 {
     font-size: 40px;
@@ -186,7 +210,10 @@
 <body>
 <div class="wrap">
   <header>
-    <div class="eyebrow">MI hírek</div>
+    <div class="header-top">
+      <div class="eyebrow">MI hírek</div>
+      <a class="patreon-btn" href="https://patreon.com/aihirek?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink" target="_blank" rel="noopener noreferrer">Támogatás Patreonon</a>
+    </div>
     <h1>MI hírek — reggeli összefoglaló</h1>
     <p class="date">2026. augusztus 5.</p>
     <p class="intro">A világ mesterséges intelligenciával kapcsolatos legfontosabb történései az elmúlt napokból, rangsorolva globális jelentőség szerint — hogy reggeli kávé mellett gyorsan átfuthasd.</p>
@@ -255,6 +282,16 @@
       <a class="source" href="https://fortune.com/2026/08/03/palantir-earnings-guidance-beat-revenue-profit-ai-demand/" target="_blank" rel="noopener noreferrer"><span class="source-name">Fortune</span>Forrás →</a>
     </article>
 
+  </div>
+
+  <div style="background-color: #1e1e24; border-left: 4px solid #ff424d; padding: 20px; margin: 40px auto; max-width: 600px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); font-family: sans-serif; text-align: center;">
+      <h3 style="margin-top: 0; color: #ffffff; font-size: 1.2rem;">Hasznos volt a mai összefoglaló? 🤖</h3>
+      <p style="color: #a0aec0; margin-bottom: 20px; font-size: 0.95rem; line-height: 1.5;">
+          Támogasd a hazai AI tartalomgyártást, és élvezd a cikkeket egy exkluzív, reklámmentes archívumból!
+      </p>
+      <a href="https://patreon.com/aihirek?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink" target="_blank" style="background-color: #ff424d; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block; transition: background-color 0.3s ease;">
+          Támogatom Patreonon
+      </a>
   </div>
 
   <footer>
