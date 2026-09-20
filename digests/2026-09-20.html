@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MI hírek — reggeli összefoglaló — 2026. szeptember 20.</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --card: #f5f5f7;
+    --text-primary: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --accent: #0071e3;
+    --border: #d2d2d7;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 56px 20px 80px;
+  }
+  header {
+    margin-bottom: 48px;
+  }
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .eyebrow {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+    margin-bottom: 0;
+  }
+  .support-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000;
+    background: #FFDD00;
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 7px 14px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .support-btn:hover {
+    opacity: 0.9;
+  }
+  h1 {
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+  }
+  .date {
+    font-size: 17px;
+    color: var(--text-secondary);
+    margin: 0 0 20px;
+    font-weight: 500;
+  }
+  .intro {
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 60ch;
+  }
+  .note {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 16px;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .card {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 28px 24px 24px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+  .card-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 4px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+  .pill {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(0, 113, 227, 0.1);
+    border-radius: 999px;
+    padding: 5px 12px;
+  }
+  .card-date {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-left: auto;
+  }
+  h2 {
+    font-size: 21px;
+    line-height: 1.3;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+  }
+  .summary {
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--text-primary);
+    margin: 0 0 16px;
+  }
+  .why {
+    font-size: 15px;
+    line-height: 1.5;
+    background: #ffffff;
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin: 0 0 18px;
+    color: var(--text-primary);
+  }
+  .why strong {
+    color: var(--accent);
+  }
+  .source {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .source:hover {
+    text-decoration: underline;
+  }
+  .source-name {
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: 14px;
+    margin-right: 6px;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+  footer a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 480px) {
+    h1 { font-size: 32px; }
+    .wrap { padding: 40px 16px 64px; }
+    .card { padding: 22px 18px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="header-top">
+      <div class="eyebrow">MI hírek</div>
+      <a class="support-btn" href="https://buymeacoffee.com/aihirek" target="_blank" rel="noopener noreferrer">☕ Támogatás</a>
+    </div>
+    <h1>MI hírek — reggeli összefoglaló</h1>
+    <p class="date">2026. szeptember 20.</p>
+    <p class="intro">A világ mesterséges intelligenciával kapcsolatos legfontosabb történései az elmúlt napokból, rangsorolva globális jelentőség szerint — hogy reggeli kávé mellett gyorsan átfuthasd.</p>
+    <p class="note">A mai válogatás szeptember 15. és 19. közötti fejleményeket öleli fel: ezekben a napokban öt, megbízhatóan forrásolható, valóban jelentős globális hír született.</p>
+  </header>
+
+  <div class="list">
+
+    <article class="card">
+      <div class="card-top">
+        <span class="badge">1</span>
+        <span class="pill">Üzlet</span>
+        <span class="card-date">2026. szept. 19.</span>
+      </div>
+      <h2>Négy előfizető antitröszt pert indított az Anthropic, az OpenAI, az xAI és a Google ellen a "lassítási megállapodás" miatt</h2>
+      <p class="summary">Szeptember 19-én vált ismertté, hogy négy fizető MI-előfizető szövetségi antitröszt keresetet nyújtott be a kaliforniai északi körzeti bírósághoz az Anthropic, az OpenAI, az xAI és a Google ellen. A kereset szerint a cégek vezérigazgatói jogellenes versenykorlátozó megállapodást kötöttek azzal, hogy nyilvánosan egyetértettek Dario Amodei szeptember 12-i, "We Must Pace the Frontier" című esszéjével, amely a modellfejlesztés iparági szintű lassítására szólított fel. A felperesek szerint az önálló, biztonsági célú lassítás jogszerű lenne, de a versenytársak közötti összehangolt "kollektív fékezés" megsérti a szövetségi antitröszt törvényeket.</p>
+      <p class="why"><strong>Miért fontos:</strong> Ez az első nagy horderejű jogi teszt arra, hogy a frontvonalbeli MI-cégek biztonsági célú összehangolt fellépése ütközhet-e a versenyjoggal, ami alapjaiban befolyásolhatja, hogyan koordinálhatnak egymással a laborok a jövőben.</p>
+      <a class="source" href="https://www.cnn.com/2026/09/19/business/ai-slowdown-lawsuit-antitrust" target="_blank" rel="noopener noreferrer"><span class="source-name">CNN Business</span>Forrás →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <span class="badge">2</span>
+        <span class="pill">Modell/kiadás</span>
+        <span class="card-date">2026. szept. 15.</span>
+      </div>
+      <h2>A Google elindította a Gemini 3.8 Live és Gemini 3.8 Live Extended Thinking hangalapú modelljeit</h2>
+      <p class="summary">A Google szeptember 15-én mutatta be a Gemini 3.8 Live és a Gemini 3.8 Live Extended Thinking modelleket, amelyeket saját állítása szerint eddigi legfejlettebb, valós idejű hangalapú dialógusmodelljeinek nevez. Az új modellek gyorsabb, közel valós idejű következtetést, erősebb hangalapú ügynöki teljesítményt, vizuális kontextusértést és többlépéses feladatvégrehajtást kínálnak, és fokozatosan válnak elérhetővé a Gemini alkalmazásban, a Workspace-ben, a Keresésben és a Gemini API-n keresztül.</p>
+      <p class="why"><strong>Miért fontos:</strong> A hangalapú, valós idejű MI-asszisztensek minőségi ugrása közvetlenül befolyásolja a Google több milliárd felhasználót elérő termékeit, és tovább szűkíti a szakadékot a szöveges és a hangalapú MI-interakció között.</p>
+      <a class="source" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/" target="_blank" rel="noopener noreferrer"><span class="source-name">Google Blog</span>Forrás →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <span class="badge">3</span>
+        <span class="pill">Kutatás</span>
+        <span class="card-date">2026. szept. 17.</span>
+      </div>
+      <h2>Az Anthropic megnyitotta a Mythos modellt a biológiai kutatók előtt, enyhített biztonsági korlátokkal</h2>
+      <p class="summary">Az Anthropic szeptember 17-én indította el az Élettudományi Ellenőrzési Programot (LSVP), amelyben ellenőrzött életkutatási szervezetek hozzáférhetnek a Mythos, az Opus és a Sonnet modellekhez egy, a biológiai témákra megengedőbb biztonsági keretrendszerrel, miközben minden más terület korlátozásai érintetlenek maradnak. A programban a valós idejű blokkolás helyett utólagos, 30 napos adatmegőrzésű megfigyelés lép életbe, a magas kockázatú felhasználás pedig egyetlen megnevezett projektre korlátozódik, félévente megújítandó engedéllyel.</p>
+      <p class="why"><strong>Miért fontos:</strong> Az Anthropic ezzel először teszi elérhetővé legfejlettebb, korábban szigorúan zárt Mythos modelljét valódi biológiai és gyógyszerkutatási munkára, ami felgyorsíthatja az MI-alapú gyógyszerfejlesztést, de új biológiai biztonsági kockázatokat is felvet.</p>
+      <a class="source" href="https://www.anthropic.com/news/life-sciences-verification-program" target="_blank" rel="noopener noreferrer"><span class="source-name">Anthropic</span>Forrás →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <span class="badge">4</span>
+        <span class="pill">Üzlet</span>
+        <span class="card-date">2026. szept. 17.</span>
+      </div>
+      <h2>III. Károly brit király MI-biztonsági csúcstalálkozót tartott az Nvidia, az OpenAI, az Anthropic és a Google DeepMind vezetőivel</h2>
+      <p class="summary">III. Károly király szeptember 17-én a skóciai Dumfries House-ban fogadta az Nvidia, az OpenAI, az Anthropic és a Google DeepMind vezetőit, köztük Jensen Huangot és Demis Hassabist, hogy az MI-fejlesztést "az emberiség szolgálatában" tartsák. A Ditchley Foundation által megszervezett találkozón a király arra figyelmeztetett, hogy megfelelő kontroll nélkül fennállhat a veszély, hogy a technológia rossz kezekbe kerül vagy katasztrofális módon használják, ám a tárgyalás nem eredményezett kötelező megállapodást, csak közös alapelvek lehetőségéről tárgyaltak.</p>
+      <p class="why"><strong>Miért fontos:</strong> A találkozó jelzi, hogy az MI biztonsági kockázatai már a legmagasabb politikai-társadalmi szintekig elérnek, ugyanakkor rávilágít arra is, hogy a szimbolikus gesztusokon túl még nincs érdemi, kikényszeríthető nemzetközi keretrendszer.</p>
+      <a class="source" href="https://fortune.com/2026/09/17/king-charles-ai-existential-dangers-control/" target="_blank" rel="noopener noreferrer"><span class="source-name">Fortune</span>Forrás →</a>
+    </article>
+
+    <article class="card">
+      <div class="card-top">
+        <span class="badge">5</span>
+        <span class="pill">Kutatás</span>
+        <span class="card-date">2026. szept. 17.</span>
+      </div>
+      <h2>A Google DeepMind saját intézetet indított az AGI körüli vita szélesítésére</h2>
+      <p class="summary">A Google DeepMind szeptember 17-én bejelentette a DeepMind Institute elindítását, amelynek célja az általános mesterséges intelligencia (AGI) körüli vélemények ütköztetése; igazgatói között van Shane Legg társalapító, Demis Hassabis és James Manyika. Az intézet induló négyesszé-gyűjteménye olyan témákat érint, mint az AGI gazdasági hatásainak kezelése, az emberi felügyelet megőrzése, és Hassabis javaslata egy amerikai vezetésű, frontvonalbeli MI-modelleket önkéntesen — majd később kötelezően — tesztelő szabványügyi testületről.</p>
+      <p class="why"><strong>Miért fontos:</strong> Az egyik legbefolyásosabb MI-labor most nyilvánosan, intézményesített formában vállalja fel a belső nézetkülönbségeket az AGI-ról, ami jelzi, hogy a szakma egyre komolyabban veszi a közeli AGI lehetőségét és az azzal kapcsolatos szabályozási kérdéseket.</p>
+      <a class="source" href="https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate/" target="_blank" rel="noopener noreferrer"><span class="source-name">TechCrunch</span>Forrás →</a>
+    </article>
+
+  </div>
+
+<div style="background-color: #1e1e24; border-left: 4px solid #FFDD00; padding: 20px; margin: 40px auto; max-width: 600px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); font-family: sans-serif; text-align: center;">
+    <h3 style="margin-top: 0; color: #ffffff; font-size: 1.2rem;">Hasznos volt a mai összefoglaló? </h3>
+    <p style="color: #a0aec0; margin-bottom: 20px; font-size: 0.95rem; line-height: 1.5;">
+        Ha spóroltam neked egy kis időt ma reggel, és értékeled a munkámat, dobj egy virtuális támogatást!
+    </p>
+    <a href="https://buymeacoffee.com/aihirek" target="_blank" style="background-color: #FFDD00; color: #000000; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; display: inline-block; transition: opacity 0.3s ease;">
+        ☕ Támogatom a projektet egy kávéval
+    </a>
+</div>
+
+  <footer>
+    <a href="../index.html">← Vissza az archívumhoz</a>
+  </footer>
+</div>
+</body>
+</html>
